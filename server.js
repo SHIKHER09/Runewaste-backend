@@ -18,12 +18,9 @@ const __dirname = dirname(__filename); // Derive the directory name
 
 const app = express();
 
-// static file
-app.use(express.static(join(__dirname, "./client/build")));
 
-app.get("*", (req, res) => {
-  res.sendFile(join(__dirname, "./client/build/index.html"));
-});
+
+
 
 //middlewares
 app.use(cors());
